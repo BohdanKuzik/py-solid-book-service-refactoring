@@ -1,13 +1,13 @@
 from app.book.book import Book
 
-from app.book.display import BookDisplayer, ConsoleDisplay, ReverseDisplay
+from app.book.display import BookDisplayer, DisplayConsole, ReverseDisplay
 from app.book.print import BookPrinter, ConsolePrint, ReversePrint
 from app.book.serialize import BookSerializer, JSONSerialize, XMLSerialize
 
 
 def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
     display_map = {
-        "console": ConsoleDisplay(),
+        "console": DisplayConsole(),
         "reverse": ReverseDisplay()
     }
 
