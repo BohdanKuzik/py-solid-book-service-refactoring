@@ -24,11 +24,3 @@ class XMLSerialize(Serialize):
         content = ET.SubElement(root, "content")
         content.text = book.content
         return ET.tostring(root, encoding="unicode")
-
-
-class BookSerializer:
-    def __init__(self, serializer: Serialize) -> None:
-        self.serializer = serializer
-
-    def serialize(self, book: Book) -> None:
-        return self.serializer.serialize(book)

@@ -14,14 +14,6 @@ class DisplayConsole(Display):
         print(book.content)
 
 
-class ReverseDisplay(Display):
+class DisplayReverse(Display):
     def display(self, book: Book) -> None:
         print(book.content[::-1])
-
-
-class BookDisplayer:
-    def __init__(self, displayer: Display) -> None:
-        self.displayer = displayer
-
-    def display(self, book: Book) -> None:
-        return self.displayer.display(book)
